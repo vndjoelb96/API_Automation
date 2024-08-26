@@ -1,0 +1,9 @@
+# To execute only Tags
+# robot --include Demo1 TestCases/TC03_Sanity.robot
+# robot --exclude Demo1 TestCases/TC03_Sanity.robot
+
+# robot TestCases/TC04_PUT_request.robot
+
+# robot --rerunfailed output.xml --output output2.xml TestCases/TC03_Sanity.robot
+
+# rebot --output output.xml --merge output*.xml

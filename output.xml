@@ -1,97 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-08-24T23:28:45.606900" rpa="false" schemaversion="5">
-<suite id="s1" name="TC02 POST request" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC02_POST_request.robot">
-<test id="s1-t1" name="Post_User_Details" line="17">
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-08-27T00:20:12.708881" rpa="false" schemaversion="5">
+<suite id="s1" name="TC06 Bearer Auth" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC06_Bearer_Auth.robot">
+<test id="s1-t1" name="Bearer_Auth" line="11">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-08-24T23:28:45.692996" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mypost_session</arg>
+<msg time="2024-08-27T00:20:12.796419" level="INFO">Creating Session using : alias=mysession, url=https://certtransaction.elementexpress.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-08-24T23:28:45.692855" elapsed="0.000281"/>
+<status status="PASS" start="2024-08-27T00:20:12.796283" elapsed="0.000303"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-08-24T23:28:45.693955" level="INFO">${body} = {'name': 'vinodzzz', 'job': 'captain'}</msg>
-<var>${body}</var>
-<arg>name=vinodzzz</arg>
-<arg>job=captain</arg>
+<msg time="2024-08-27T00:20:12.797477" level="INFO">${headers} = {'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml'}</msg>
+<var>${headers}</var>
+<arg>Authorization=${bearer_token}</arg>
+<arg>Content-Type=text/xml</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-08-24T23:28:45.693735" elapsed="0.000239"/>
+<status status="PASS" start="2024-08-27T00:20:12.797214" elapsed="0.000282"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-08-24T23:28:45.694205" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json; charset=utf-8</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-08-24T23:28:45.694087" elapsed="0.000134"/>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-08-27T00:20:12.797729" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml"&gt;/Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml&lt;/a&gt;'.</msg>
+<msg time="2024-08-27T00:20:12.798030" level="INFO">${req_body} = &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+ &lt;root&gt;
+     &lt;firstName&gt;John&lt;/firstName&gt;
+     &lt;lastName&gt;doe&lt;/lastName&gt;
+     &lt;age&gt;26&lt;/age&gt;
+     &lt;age&gt;36&lt;/age&gt;
+     &lt;age&gt;46&lt;/age&gt;
+     &lt;address&gt;
+         &lt;streetA...</msg>
+<var>${req_body}</var>
+<arg>${EXECDIR}/TestCases/Data.xml</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-08-27T00:20:12.797612" elapsed="0.000438"/>
 </kw>
 <kw name="Post Request" owner="RequestsLibrary">
-<msg time="2024-08-24T23:28:45.694330" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg time="2024-08-24T23:28:46.152843" level="INFO">POST Request : url=https://reqres.in/api/users 
- path_url=/api/users 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '38'} 
- body={"name": "vinodzzz", "job": "captain"} 
+<msg time="2024-08-27T00:20:12.798169" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-08-27T00:20:16.484971" level="INFO">POST Request : url=https://certtransaction.elementexpress.com/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml', 'Content-Length': '579'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+ &lt;root&gt;
+     &lt;firstName&gt;John&lt;/firstName&gt;
+     &lt;lastName&gt;doe&lt;/lastName&gt;
+     &lt;age&gt;26&lt;/age&gt;
+     &lt;age&gt;36&lt;/age&gt;
+     &lt;age&gt;46&lt;/age&gt;
+     &lt;address&gt;
+         &lt;streetAddress&gt;VJ lane&lt;/streetAddress&gt;
+         &lt;city&gt;Nara&lt;/city&gt;
+         &lt;postalCode&gt;630-0192&lt;/postalCode&gt;
+     &lt;/address&gt;
+     &lt;phoneNumbers&gt;
+         &lt;type&gt;iPhone1&lt;/type&gt;
+           &lt;type&gt;iPhone2&lt;/type&gt;
+         &lt;number&gt;0123-4567-8888&lt;/number&gt;
+     &lt;/phoneNumbers&gt;
+     &lt;phoneNumbers&gt;
+         &lt;type&gt;home&lt;/type&gt;
+         &lt;number&gt;0123-4567-8910&lt;/number&gt;
+     &lt;/phoneNumbers&gt;
+ &lt;/root&gt;
+ 
  </msg>
-<msg time="2024-08-24T23:28:46.153228" level="INFO">POST Response : url=https://reqres.in/api/users 
- status=201, reason=Created 
- headers={'Date': 'Sat, 24 Aug 2024 17:58:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '85', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1724522326&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=geseRE0fj35t4PwDKY6mLz5azD%2Fx1%2B9gvx8rWqELSXc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1724522326&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=geseRE0fj35t4PwDKY6mLz5azD%2Fx1%2B9gvx8rWqELSXc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"55-rZEsbpMyHJbGH1tUEGwx2UOgI/o"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8b853b780d85b2bb-BLR'} 
- body={"name":"vinodzzz","job":"captain","id":"441","createdAt":"2024-08-24T17:58:46.074Z"} 
+<msg time="2024-08-27T00:20:16.485462" level="INFO">POST Response : url=https://certtransaction.elementexpress.com/ 
+ status=200, reason=200 OK 
+ headers={'Date': 'Mon, 26 Aug 2024 18:50:14 GMT', 'Content-Type': 'text/xml; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'private', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'X-Frame-Options': 'DENY', 'CF-Cache-Status': 'DYNAMIC', 'Set-Cookie': '__cf_bm=9xqipjFez42hqgce0NuSkSW966BvS_M0LfuZvq68chE-1724698214-1.0.1.1-ZaA4LmgcBcc_dbl7ZvhvRronh3hEm0DnXZCfSzx_il6vOVKAor3mOnQ_U815gbgLpvGFhX0E1oGpx.ZbmxqINjXuwFeAGdVOFBHCG1O0gPw; path=/; expires=Mon, 26-Aug-24 19:20:14 GMT; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None, __cfruid=6812cf2cdf3d1789de581a61c329e1dc5858cf6c-1724698214; path=/; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None', 'Server': 'cloudflare', 'CF-RAY': '8b960196c9039a78-NAG'} 
+ body=&lt;Response xmlns='https://transaction.elementexpress.com'&gt;&lt;Response&gt;&lt;ExpressResponseCode&gt;103&lt;/ExpressResponseCode&gt;&lt;ExpressResponseMessage&gt;TargetNamespace required&lt;/ExpressResponseMessage&gt;&lt;/Response&gt;&lt;/Response&gt; 
  </msg>
-<msg time="2024-08-24T23:28:46.153590" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-08-27T00:20:16.486425" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'certtransaction.elementexpress.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-08-24T23:28:46.154043" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-08-27T00:20:16.487000" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>mypost_session</arg>
-<arg>${user}</arg>
-<arg>data=${body}</arg>
-<arg>headers=${header}</arg>
+<arg>mysession</arg>
+<arg>/</arg>
+<arg>data=${req_body}</arg>
+<arg>headers=${headers}</arg>
 <doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<status status="PASS" start="2024-08-24T23:28:45.694316" elapsed="0.459806"/>
+<status status="PASS" start="2024-08-27T00:20:12.798154" elapsed="3.688936"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.154974" elapsed="0.002024"/>
+<status status="PASS" start="2024-08-27T00:20:16.487866" elapsed="0.001640"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.157399" elapsed="0.001566"/>
+<status status="PASS" start="2024-08-27T00:20:16.489734" elapsed="0.000748"/>
 </kw>
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-08-24T23:28:46.160376" level="INFO">${status_code} = 201</msg>
-<var>${status_code}</var>
-<arg>${response.status_code}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.159372" elapsed="0.001054"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${status_code}</arg>
-<arg>201</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.160716" elapsed="0.000334"/>
-</kw>
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-08-24T23:28:46.162251" level="INFO">${title} = {"name":"vinodzzz","job":"captain","id":"441","createdAt":"2024-08-24T17:58:46.074Z"}</msg>
-<var>${title}</var>
-<arg>${response.content}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.161306" elapsed="0.000982"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${title}</arg>
-<arg>captain</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.162497" elapsed="0.000219"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${title}</arg>
-<arg>vinodzzz</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-08-24T23:28:46.162918" elapsed="0.000207"/>
-</kw>
-<status status="PASS" start="2024-08-24T23:28:45.692282" elapsed="0.471105"/>
+<status status="PASS" start="2024-08-27T00:20:12.795659" elapsed="3.695059"/>
 </test>
-<status status="PASS" start="2024-08-24T23:28:45.607879" elapsed="0.556308"/>
+<status status="PASS" start="2024-08-27T00:20:12.709784" elapsed="3.781655"/>
 </suite>
 <statistics>
 <total>
@@ -100,10 +99,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC02 POST request">TC02 POST request</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC06 Bearer Auth">TC06 Bearer Auth</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-24T23:28:45.694330" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-08-27T00:20:12.798169" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
 </errors>
 </robot>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <root>
+     <firstName>John</firstName>
+     <lastName>doe</lastName>
+     <age>26</age>
+     <age>36</age>
+     <age>46</age>
+     <address>
+         <streetAddress>VJ lane</streetAddress>
+         <city>Nara</city>
+         <postalCode>630-0192</postalCode>
+     </address>
+     <phoneNumbers>
+         <type>iPhone1</type>
+           <type>iPhone2</type>
+         <number>0123-4567-8888</number>
+     </phoneNumbers>
+     <phoneNumbers>
+         <type>home</type>
+         <number>0123-4567-8910</number>
+     </phoneNumbers>
+ </root>
