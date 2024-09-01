@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-08-31T18:14:29.054881" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-08-31T18:22:36.642586" rpa="false" schemaversion="5">
 <suite id="s1" name="TC07 API token" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC07_API_token.robot">
 <test id="s1-t1" name="Google_Maps_PlacesAPI" line="17">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-08-31T18:14:29.135609" level="INFO">Creating Session using : alias=mysession, url=https://places.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-08-31T18:22:36.727462" level="INFO">Creating Session using : alias=mysession, url=https://places.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-08-31T18:14:29.135448" elapsed="0.000306"/>
+<status status="PASS" start="2024-08-31T18:22:36.727300" elapsed="0.000296"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-08-31T18:14:29.136393" level="INFO">${params} = {'fields': 'id,displayName', 'key': 'AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo'}</msg>
+<msg time="2024-08-31T18:22:36.728440" level="INFO">${params} = {'fields': 'id,displayName', 'key': 'AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo'}</msg>
 <var>${params}</var>
 <arg>fields=id,displayName</arg>
 <arg>key=${Api_token}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-08-31T18:14:29.136163" elapsed="0.000247"/>
+<status status="PASS" start="2024-08-31T18:22:36.728191" elapsed="0.000267"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-08-31T18:14:29.585406" level="INFO">GET Request : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
+<msg time="2024-08-31T18:22:37.120892" level="INFO">GET Request : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  path_url=/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-08-31T18:14:29.585814" level="INFO">GET Response : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
+<msg time="2024-08-31T18:22:37.121312" level="INFO">GET Response : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  status=200, reason=OK 
- headers={'Vary': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Sat, 31 Aug 2024 12:44:29 GMT', 'Server': 'scaffolding on HTTPServer2', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
+ headers={'Vary': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Sat, 31 Aug 2024 12:52:37 GMT', 'Server': 'scaffolding on HTTPServer2', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
  body={
   "id": "ChIJj61dQgK6j4AR4GeTYWZsKWw",
   "displayName": {
@@ -35,29 +35,29 @@
 }
  
  </msg>
-<msg time="2024-08-31T18:14:29.586108" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'places.googleapis.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-08-31T18:22:37.121618" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'places.googleapis.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-08-31T18:14:29.586528" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-08-31T18:22:37.122013" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>${request_uri}</arg>
 <arg>params=${params}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-08-31T18:14:29.136525" elapsed="0.450068"/>
+<status status="PASS" start="2024-08-31T18:22:36.728573" elapsed="0.393499"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-31T18:14:29.587283" elapsed="0.002435"/>
+<status status="PASS" start="2024-08-31T18:22:37.122754" elapsed="0.001771"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-31T18:14:29.590143" elapsed="0.001060"/>
+<status status="PASS" start="2024-08-31T18:22:37.124848" elapsed="0.001663"/>
 </kw>
-<status status="PASS" start="2024-08-31T18:14:29.134841" elapsed="0.456635"/>
+<status status="PASS" start="2024-08-31T18:22:36.726674" elapsed="0.400233"/>
 </test>
-<status status="PASS" start="2024-08-31T18:14:29.055790" elapsed="0.536520"/>
+<status status="PASS" start="2024-08-31T18:22:36.643492" elapsed="0.484325"/>
 </suite>
 <statistics>
 <total>
