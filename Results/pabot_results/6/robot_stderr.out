@@ -1,0 +1,1 @@
+[ ERROR ] Error in file '/Users/vinodjoel/Documents/APIAutomation/Testcases/TC07_API_token.robot' on line 10: Error in file '/Users/vinodjoel/Documents/APIAutomation/TestCases/Credentials.robot' on line 4: Resource file with 'Test Cases' section is invalid.

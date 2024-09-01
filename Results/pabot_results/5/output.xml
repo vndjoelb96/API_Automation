@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-09-01T23:11:31.328466" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="TC06 Bearer Auth" source="/Users/vinodjoel/Documents/APIAutomation/Testcases/TC06_Bearer_Auth.robot">
+<test id="s1-s1-t1" name="Bearer_Auth" line="11">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-01T23:11:31.395294" level="INFO">Creating Session using : alias=mysession, url=https://certtransaction.elementexpress.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-01T23:11:31.395137" elapsed="0.000291"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-01T23:11:31.396530" level="INFO">${headers} = {'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml'}</msg>
+<var>${headers}</var>
+<arg>Authorization=${bearer_token}</arg>
+<arg>Content-Type=text/xml</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-01T23:11:31.395829" elapsed="0.000723"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-09-01T23:11:31.396784" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml"&gt;/Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml&lt;/a&gt;'.</msg>
+<msg time="2024-09-01T23:11:31.396910" level="INFO">${req_body} = &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+ &lt;root&gt;
+     &lt;firstName&gt;John&lt;/firstName&gt;
+     &lt;lastName&gt;doe&lt;/lastName&gt;
+     &lt;age&gt;26&lt;/age&gt;
+     &lt;age&gt;36&lt;/age&gt;
+     &lt;age&gt;46&lt;/age&gt;
+     &lt;address&gt;
+         &lt;streetA...</msg>
+<var>${req_body}</var>
+<arg>${EXECDIR}/TestCases/Data.xml</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-09-01T23:11:31.396650" elapsed="0.000282"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-09-01T23:11:31.397055" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-09-01T23:11:31.759800" level="INFO">POST Request : url=https://certtransaction.elementexpress.com/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml', 'Content-Length': '579'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+ &lt;root&gt;
+     &lt;firstName&gt;John&lt;/firstName&gt;
+     &lt;lastName&gt;doe&lt;/lastName&gt;
+     &lt;age&gt;26&lt;/age&gt;
+     &lt;age&gt;36&lt;/age&gt;
+     &lt;age&gt;46&lt;/age&gt;
+     &lt;address&gt;
+         &lt;streetAddress&gt;VJ lane&lt;/streetAddress&gt;
+         &lt;city&gt;Nara&lt;/city&gt;
+         &lt;postalCode&gt;630-0192&lt;/postalCode&gt;
+     &lt;/address&gt;
+     &lt;phoneNumbers&gt;
+         &lt;type&gt;iPhone1&lt;/type&gt;
+           &lt;type&gt;iPhone2&lt;/type&gt;
+         &lt;number&gt;0123-4567-8888&lt;/number&gt;
+     &lt;/phoneNumbers&gt;
+     &lt;phoneNumbers&gt;
+         &lt;type&gt;home&lt;/type&gt;
+         &lt;number&gt;0123-4567-8910&lt;/number&gt;
+     &lt;/phoneNumbers&gt;
+ &lt;/root&gt;
+ 
+ </msg>
+<msg time="2024-09-01T23:11:31.759907" level="INFO">POST Response : url=https://certtransaction.elementexpress.com/ 
+ status=200, reason=200 OK 
+ headers={'Date': 'Sun, 01 Sep 2024 17:41:31 GMT', 'Content-Type': 'text/xml; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'private', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'X-Frame-Options': 'DENY', 'CF-Cache-Status': 'DYNAMIC', 'Set-Cookie': '__cf_bm=2yPlA9lE7U1VRv7upq5UqsJEQyhHRt5NTXszBcrWtGY-1725212491-1.0.1.1-Ytn2DCy4MTD1Gk9uxBcxAuKhbjsVcYyDURPEVLpLP9OuBCZZbLAinh5BOR12ulY8ANK7x27q3yTLp6hz5tvGZQdlJ6JBNaCajU958jSHKjc; path=/; expires=Sun, 01-Sep-24 18:11:31 GMT; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None, __cfruid=ceb35625bf8d0322b31c0399083a99dc185e2701-1725212491; path=/; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None', 'Server': 'cloudflare', 'CF-RAY': '8bc70d3828eef36f-BOM'} 
+ body=&lt;Response xmlns='https://transaction.elementexpress.com'&gt;&lt;Response&gt;&lt;ExpressResponseCode&gt;103&lt;/ExpressResponseCode&gt;&lt;ExpressResponseMessage&gt;TargetNamespace required&lt;/ExpressResponseMessage&gt;&lt;/Response&gt;&lt;/Response&gt; 
+ </msg>
+<msg time="2024-09-01T23:11:31.759999" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'certtransaction.elementexpress.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-09-01T23:11:31.760104" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/</arg>
+<arg>data=${req_body}</arg>
+<arg>headers=${headers}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-09-01T23:11:31.397022" elapsed="0.363104"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-01T23:11:31.760313" elapsed="0.000621"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-01T23:11:31.761041" elapsed="0.000397"/>
+</kw>
+<status status="PASS" start="2024-09-01T23:11:31.394546" elapsed="0.366996"/>
+</test>
+<status status="PASS" start="2024-09-01T23:11:31.343504" elapsed="0.418371"/>
+</suite>
+<status status="PASS" start="2024-09-01T23:11:31.332674" elapsed="0.429607"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC06 Bearer Auth">Suites.TC06 Bearer Auth</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-01T23:11:31.397055" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

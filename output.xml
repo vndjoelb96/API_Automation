@@ -1,613 +1,613 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-09-01T22:43:33.433076" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-09-01T22:59:17.337621" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCases" source="/Users/vinodjoel/Documents/APIAutomation/TestCases">
 <suite id="s1-s1" name="TC01 GET request" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC01_GET_request.robot">
 <test id="s1-s1-t1" name="Get_bookstore_info" line="12">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:33.508675" level="INFO">Creating Session using : alias=mysession, url=https://demoqa.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:17.426048" level="INFO">Creating Session using : alias=mysession, url=https://demoqa.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:33.508536" elapsed="0.000274"/>
+<status status="PASS" start="2024-09-01T22:59:17.425921" elapsed="0.000255"/>
 </kw>
 <kw name="Get Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:33.509455" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2024-09-01T22:43:34.488736" level="INFO">GET Request : url=https://demoqa.com/BookStore/v1/Books 
+<msg time="2024-09-01T22:59:17.426708" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-09-01T22:59:18.076608" level="INFO">GET Request : url=https://demoqa.com/BookStore/v1/Books 
  path_url=/BookStore/v1/Books 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-09-01T22:43:34.489212" level="INFO">GET Response : url=https://demoqa.com/BookStore/v1/Books 
+<msg time="2024-09-01T22:59:18.077282" level="INFO">GET Response : url=https://demoqa.com/BookStore/v1/Books 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Sun, 01 Sep 2024 17:13:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '4514', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"'} 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Sun, 01 Sep 2024 17:29:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '4514', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"'} 
  body={"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 &amp; Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&amp;%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]} 
  </msg>
-<msg time="2024-09-01T22:43:34.489820" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'demoqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-09-01T22:59:18.078027" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'demoqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-09-01T22:43:34.490249" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:18.078617" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/BookStore/v1/${books}</arg>
 <doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:33.509432" elapsed="0.980880"/>
+<status status="PASS" start="2024-09-01T22:59:17.426691" elapsed="0.652004"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:34.493097" level="INFO">${status_code} = 200</msg>
+<msg time="2024-09-01T22:59:18.081729" level="INFO">${status_code} = 200</msg>
 <var>${status_code}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.491066" elapsed="0.002097"/>
+<status status="PASS" start="2024-09-01T22:59:18.079573" elapsed="0.002361"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status_code}</arg>
 <arg>200</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.493646" elapsed="0.000448"/>
+<status status="PASS" start="2024-09-01T22:59:18.082522" elapsed="0.000463"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:34.497562" level="INFO">${title} = {"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media",...</msg>
+<msg time="2024-09-01T22:59:18.085666" level="INFO">${title} = {"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media",...</msg>
 <var>${title}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.494432" elapsed="0.003201"/>
+<status status="PASS" start="2024-09-01T22:59:18.083275" elapsed="0.002440"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>Git Pocket Guide</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.498038" elapsed="0.000338"/>
+<status status="PASS" start="2024-09-01T22:59:18.085952" elapsed="0.000232"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2024-09-01T22:43:34.499731" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
+<msg time="2024-09-01T22:59:18.087313" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
 <var>${contentTypeValue}</var>
 <arg>${response.headers}</arg>
 <arg>Content-Type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.498789" elapsed="0.000980"/>
+<status status="PASS" start="2024-09-01T22:59:18.086546" elapsed="0.000803"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${contentTypeValue}</arg>
 <arg>application/json; charset=utf-8</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.499993" elapsed="0.000289"/>
+<status status="PASS" start="2024-09-01T22:59:18.087561" elapsed="0.000280"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2024-09-01T22:43:34.501240" level="INFO">${content_Connection} = keep-alive</msg>
+<msg time="2024-09-01T22:59:18.088792" level="INFO">${content_Connection} = keep-alive</msg>
 <var>${content_Connection}</var>
 <arg>${response.headers}</arg>
 <arg>Connection</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.500486" elapsed="0.000790"/>
+<status status="PASS" start="2024-09-01T22:59:18.088041" elapsed="0.000787"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${content_Connection}</arg>
 <arg>keep-alive</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.501497" elapsed="0.000266"/>
+<status status="PASS" start="2024-09-01T22:59:18.089038" elapsed="0.000247"/>
 </kw>
-<status status="PASS" start="2024-09-01T22:43:33.507929" elapsed="0.994095"/>
+<status status="PASS" start="2024-09-01T22:59:17.425334" elapsed="0.664214"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:33.447085" elapsed="1.055597"/>
+<status status="PASS" start="2024-09-01T22:59:17.352892" elapsed="0.737316"/>
 </suite>
 <suite id="s1-s2" name="TC02 POST PATCH request" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC02_POST_PATCH_request.robot">
 <test id="s1-s2-t1" name="Post_User_Details" line="21">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:34.664179" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:18.192060" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mypost_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:34.663994" elapsed="0.000410"/>
+<status status="PASS" start="2024-09-01T22:59:18.191883" elapsed="0.000380"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:34.664869" level="INFO">${body} = {'name': 'vinodzzz', 'job': 'captain'}</msg>
+<msg time="2024-09-01T22:59:18.192684" level="INFO">${body} = {'name': 'vinodzzz', 'job': 'captain'}</msg>
 <var>${body}</var>
 <arg>name=vinodzzz</arg>
 <arg>job=captain</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.664569" elapsed="0.000318"/>
+<status status="PASS" start="2024-09-01T22:59:18.192410" elapsed="0.000291"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:34.665121" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<msg time="2024-09-01T22:59:18.192926" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.665004" elapsed="0.000133"/>
+<status status="PASS" start="2024-09-01T22:59:18.192814" elapsed="0.000127"/>
 </kw>
 <kw name="Post Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:34.665258" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg time="2024-09-01T22:43:37.239126" level="INFO">POST Request : url=https://reqres.in/api/users 
+<msg time="2024-09-01T22:59:18.193062" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-09-01T22:59:18.686962" level="INFO">POST Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '38'} 
  body={"name": "vinodzzz", "job": "captain"} 
  </msg>
-<msg time="2024-09-01T22:43:37.239497" level="INFO">POST Response : url=https://reqres.in/api/users 
+<msg time="2024-09-01T22:59:18.687263" level="INFO">POST Response : url=https://reqres.in/api/users 
  status=201, reason=Created 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '85', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725210817&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xrVTNQgbEgG%2Bmg7jUsTo6KPAFLh0d6QJFs8ZRkwMKbw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725210817&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xrVTNQgbEgG%2Bmg7jUsTo6KPAFLh0d6QJFs8ZRkwMKbw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"55-tHWRJeNNy/HDDZVAyHCrIjg9g5s"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6e455598c3b85-BOM'} 
- body={"name":"vinodzzz","job":"captain","id":"881","createdAt":"2024-09-01T17:13:37.123Z"} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '85', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725211758&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImujTGGcPAySvUtRNyLxcQs1wXprvfuNOgO7cvw9Qmc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725211758&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ImujTGGcPAySvUtRNyLxcQs1wXprvfuNOgO7cvw9Qmc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"55-q8ae1ghmTRrOpBgDiCiXL6uCGx0"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb518ba6f472-BOM'} 
+ body={"name":"vinodzzz","job":"captain","id":"706","createdAt":"2024-09-01T17:29:18.561Z"} 
  </msg>
-<msg time="2024-09-01T22:43:37.239787" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-09-01T22:59:18.687563" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-09-01T22:43:37.240218" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-09-01T22:59:18.687961" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>mypost_session</arg>
 <arg>${user}</arg>
 <arg>data=${body}</arg>
 <arg>headers=${header}</arg>
 <doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:34.665243" elapsed="2.575041"/>
+<status status="PASS" start="2024-09-01T22:59:18.193046" elapsed="0.494973"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.241065" elapsed="0.001596"/>
+<status status="PASS" start="2024-09-01T22:59:18.688739" elapsed="0.001573"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.243058" elapsed="0.001549"/>
+<status status="PASS" start="2024-09-01T22:59:18.690696" elapsed="0.001042"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.246258" level="INFO">${status_code} = 201</msg>
+<msg time="2024-09-01T22:59:18.693514" level="INFO">${status_code} = 201</msg>
 <var>${status_code}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.245029" elapsed="0.001276"/>
+<status status="PASS" start="2024-09-01T22:59:18.692096" elapsed="0.001491"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status_code}</arg>
 <arg>201</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.246649" elapsed="0.000337"/>
+<status status="PASS" start="2024-09-01T22:59:18.694030" elapsed="0.000415"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.248059" level="INFO">${title} = {"name":"vinodzzz","job":"captain","id":"881","createdAt":"2024-09-01T17:13:37.123Z"}</msg>
+<msg time="2024-09-01T22:59:18.695802" level="INFO">${title} = {"name":"vinodzzz","job":"captain","id":"706","createdAt":"2024-09-01T17:29:18.561Z"}</msg>
 <var>${title}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.247257" elapsed="0.000838"/>
+<status status="PASS" start="2024-09-01T22:59:18.694736" elapsed="0.001112"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>captain</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.248316" elapsed="0.000225"/>
+<status status="PASS" start="2024-09-01T22:59:18.696128" elapsed="0.000284"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>vinodzzz</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.248755" elapsed="0.000207"/>
+<status status="PASS" start="2024-09-01T22:59:18.696659" elapsed="0.000257"/>
 </kw>
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:37.249962" level="INFO">${json_response} = {'name': 'vinodzzz', 'job': 'captain', 'id': '881', 'createdAt': '2024-09-01T17:13:37.123Z'}</msg>
+<msg time="2024-09-01T22:59:18.697916" level="INFO">${json_response} = {'name': 'vinodzzz', 'job': 'captain', 'id': '706', 'createdAt': '2024-09-01T17:29:18.561Z'}</msg>
 <var>${json_response}</var>
 <arg>${response.content}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-09-01T22:43:37.249172" elapsed="0.000842"/>
+<status status="PASS" start="2024-09-01T22:59:18.697120" elapsed="0.000834"/>
 </kw>
 <kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:37.292201" level="INFO">${contents} = ['881']</msg>
+<msg time="2024-09-01T22:59:18.738045" level="INFO">${contents} = ['706']</msg>
 <var>${contents}</var>
 <arg>${json_response}</arg>
 <arg>${id_path}</arg>
 <doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-09-01T22:43:37.250293" elapsed="0.041949"/>
+<status status="PASS" start="2024-09-01T22:59:18.698206" elapsed="0.039874"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.292769" level="INFO">Length is 1.</msg>
+<msg time="2024-09-01T22:59:18.738486" level="INFO">Length is 1.</msg>
 <arg>${contents}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.292571" elapsed="0.000239"/>
+<status status="PASS" start="2024-09-01T22:59:18.738324" elapsed="0.000205"/>
 </kw>
 <tag>demo1</tag>
-<status status="PASS" start="2024-09-01T22:43:34.663492" elapsed="2.629492"/>
+<status status="PASS" start="2024-09-01T22:59:18.191425" elapsed="0.547250"/>
 </test>
 <test id="s1-s2-t2" name="Patch_User_Details" line="42">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:37.293610" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:18.739320" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mypost_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:37.293479" elapsed="0.000293"/>
+<status status="PASS" start="2024-09-01T22:59:18.739186" elapsed="0.000276"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.294095" level="INFO">${body} = {'name': 'morpheus', 'job': 'zion resident'}</msg>
+<msg time="2024-09-01T22:59:18.739789" level="INFO">${body} = {'name': 'morpheus', 'job': 'zion resident'}</msg>
 <var>${body}</var>
 <arg>name=morpheus</arg>
 <arg>job=zion resident</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.293910" elapsed="0.000204"/>
+<status status="PASS" start="2024-09-01T22:59:18.739609" elapsed="0.000203"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.294377" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<msg time="2024-09-01T22:59:18.740106" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.294240" elapsed="0.000155"/>
+<status status="PASS" start="2024-09-01T22:59:18.739961" elapsed="0.000166"/>
 </kw>
 <kw name="Patch Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:37.294530" level="WARN">Keyword 'RequestsLibrary.Patch Request' is deprecated. Please use `PATCH On Session` instead.</msg>
-<msg time="2024-09-01T22:43:37.664992" level="INFO">PATCH Request : url=https://reqres.in/api/users/2 
+<msg time="2024-09-01T22:59:18.740277" level="WARN">Keyword 'RequestsLibrary.Patch Request' is deprecated. Please use `PATCH On Session` instead.</msg>
+<msg time="2024-09-01T22:59:19.543650" level="INFO">PATCH Request : url=https://reqres.in/api/users/2 
  path_url=/api/users/2 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44'} 
  body={"name": "morpheus", "job": "zion resident"} 
  </msg>
-<msg time="2024-09-01T22:43:37.665448" level="INFO">PATCH Response : url=https://reqres.in/api/users/2 
+<msg time="2024-09-01T22:59:19.544147" level="INFO">PATCH Response : url=https://reqres.in/api/users/2 
  status=200, reason=OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725210817&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xrVTNQgbEgG%2Bmg7jUsTo6KPAFLh0d6QJFs8ZRkwMKbw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725210817&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=xrVTNQgbEgG%2Bmg7jUsTo6KPAFLh0d6QJFs8ZRkwMKbw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-U5BesVWz0wcGqExuWrsypBY5OkU"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6e458680e7eea-MAA', 'Content-Encoding': 'gzip'} 
- body={"name":"morpheus","job":"zion resident","updatedAt":"2024-09-01T17:13:37.591Z"} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:19 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725211759&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=6G93layrOP%2Fx%2Fl61YfIB8KYJAfh2KjgWN%2BHchq7exRs%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725211759&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=6G93layrOP%2Fx%2Fl61YfIB8KYJAfh2KjgWN%2BHchq7exRs%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-y/7aKb7gIe/HotX+1K0qkuaP39c"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb557f1d853d-BOM', 'Content-Encoding': 'gzip'} 
+ body={"name":"morpheus","job":"zion resident","updatedAt":"2024-09-01T17:29:19.157Z"} 
  </msg>
-<msg time="2024-09-01T22:43:37.665723" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-09-01T22:59:19.544482" level="INFO">/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-09-01T22:43:37.666190" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:19.545167" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mypost_session</arg>
 <arg>${patch_url}</arg>
 <arg>data=${body}</arg>
 <arg>headers=${header}</arg>
 <doc>*DEPRECATED* Please use `PATCH On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.294509" elapsed="0.371769"/>
+<status status="PASS" start="2024-09-01T22:59:18.740257" elapsed="0.805014"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.667213" elapsed="0.001736"/>
+<status status="PASS" start="2024-09-01T22:59:19.545798" elapsed="0.001295"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.669386" elapsed="0.000976"/>
+<status status="PASS" start="2024-09-01T22:59:19.547383" elapsed="0.000928"/>
 </kw>
 <tag>demo2</tag>
-<status status="PASS" start="2024-09-01T22:43:37.293178" elapsed="0.377527"/>
+<status status="PASS" start="2024-09-01T22:59:18.738867" elapsed="0.809750"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:34.503344" elapsed="3.168482"/>
+<status status="PASS" start="2024-09-01T22:59:18.090873" elapsed="1.458333"/>
 </suite>
 <suite id="s1-s3" name="TC03 Sanity" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC03_Sanity.robot">
 <test id="s1-s3-t1" name="get request Test title" line="18">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:37.696266" level="INFO">Creating Session using : alias=session1, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:19.574473" level="INFO">Creating Session using : alias=session1, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>session1</arg>
 <arg>${base_url}</arg>
 <arg>disable_warnings=1</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:37.695989" elapsed="0.000505"/>
+<status status="PASS" start="2024-09-01T22:59:19.574164" elapsed="0.000559"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.696894" level="INFO">${endpoint} = /api/users?page=2</msg>
+<msg time="2024-09-01T22:59:19.575068" level="INFO">${endpoint} = /api/users?page=2</msg>
 <var>${endpoint}</var>
 <arg>/api/users?page=2</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.696729" elapsed="0.000192"/>
+<status status="PASS" start="2024-09-01T22:59:19.574914" elapsed="0.000177"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:37.756014" level="INFO">GET Request : url=https://reqres.in/api/users?page=2 
+<msg time="2024-09-01T22:59:19.799643" level="INFO">GET Request : url=https://reqres.in/api/users?page=2 
  path_url=/api/users?page=2 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-09-01T22:43:37.756124" level="INFO">GET Response : url=https://reqres.in/api/users?page=2 
+<msg time="2024-09-01T22:59:19.800079" level="INFO">GET Response : url=https://reqres.in/api/users?page=2 
  status=200, reason=OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725184513&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=S%2BXHtBVpA3oaQpW7AA1%2B78CujdGZBVooHt8WRR4eGbc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725184513&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=S%2BXHtBVpA3oaQpW7AA1%2B78CujdGZBVooHt8WRR4eGbc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4673', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8bc6e45afa597fd0-MAA', 'Content-Encoding': 'gzip'} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:19 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1724922052&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=%2BTacBJ2HEkB5vMOCIzwvzNLLnuBKdvusB4Yi1XCNid4%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1724922052&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=%2BTacBJ2HEkB5vMOCIzwvzNLLnuBKdvusB4Yi1XCNid4%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '6090', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb5aaf243fe6-BOM', 'Content-Encoding': 'gzip'} 
  body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
  </msg>
-<msg time="2024-09-01T22:43:37.756396" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:19.801043" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>session1</arg>
 <arg>${endpoint}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.697088" elapsed="0.059343"/>
+<status status="PASS" start="2024-09-01T22:59:19.575255" elapsed="0.225902"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.756697" elapsed="0.000725"/>
+<status status="PASS" start="2024-09-01T22:59:19.801937" elapsed="0.001635"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.757617" elapsed="0.000707"/>
+<status status="PASS" start="2024-09-01T22:59:19.803863" elapsed="0.001051"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.headers}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.758555" elapsed="0.000782"/>
+<status status="PASS" start="2024-09-01T22:59:19.805304" elapsed="0.001071"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.760267" level="INFO">{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</msg>
+<msg time="2024-09-01T22:59:19.808082" level="INFO">{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</msg>
 <arg>${response.content}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.759562" elapsed="0.000772"/>
+<status status="PASS" start="2024-09-01T22:59:19.806694" elapsed="0.001552"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.761896" level="INFO">${status_code} = 200</msg>
+<msg time="2024-09-01T22:59:19.810651" level="INFO">${status_code} = 200</msg>
 <var>${status_code}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.761332" elapsed="0.000592"/>
+<status status="PASS" start="2024-09-01T22:59:19.809311" elapsed="0.001399"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status_code}</arg>
 <arg>200</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.762103" elapsed="0.000197"/>
+<status status="PASS" start="2024-09-01T22:59:19.811048" elapsed="0.000343"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.763060" level="INFO">${first_name} = {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"i...</msg>
+<msg time="2024-09-01T22:59:19.812513" level="INFO">${first_name} = {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"i...</msg>
 <var>${first_name}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.762489" elapsed="0.000600"/>
+<status status="PASS" start="2024-09-01T22:59:19.811685" elapsed="0.000866"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${first_name}</arg>
 <arg>Michael</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.763258" elapsed="0.000166"/>
+<status status="PASS" start="2024-09-01T22:59:19.812781" elapsed="0.000225"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2024-09-01T22:43:37.764170" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
+<msg time="2024-09-01T22:59:19.814040" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
 <var>${contentTypeValue}</var>
 <arg>${response.headers}</arg>
 <arg>Content-Type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.763597" elapsed="0.000599"/>
+<status status="PASS" start="2024-09-01T22:59:19.813240" elapsed="0.000836"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${contentTypeValue}</arg>
 <arg>application/json; charset=utf-8</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.764363" elapsed="0.000196"/>
+<status status="PASS" start="2024-09-01T22:59:19.814301" elapsed="0.000280"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2024-09-01T22:43:37.765292" level="INFO">${content_Connection} = keep-alive</msg>
+<msg time="2024-09-01T22:59:19.815577" level="INFO">${content_Connection} = keep-alive</msg>
 <var>${content_Connection}</var>
 <arg>${response.headers}</arg>
 <arg>Connection</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.764715" elapsed="0.000604"/>
+<status status="PASS" start="2024-09-01T22:59:19.814792" elapsed="0.000819"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${content_Connection}</arg>
 <arg>keep-alive</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.765482" elapsed="0.000185"/>
+<status status="PASS" start="2024-09-01T22:59:19.815827" elapsed="0.000253"/>
 </kw>
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:37.766457" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
+<msg time="2024-09-01T22:59:19.817260" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
 <var>${json_response}</var>
 <arg>${response.content}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-09-01T22:43:37.765825" elapsed="0.000661"/>
+<status status="PASS" start="2024-09-01T22:59:19.816320" elapsed="0.000978"/>
 </kw>
 <kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:37.789323" level="INFO">${contents} = [2]</msg>
+<msg time="2024-09-01T22:59:19.843247" level="INFO">${contents} = [2]</msg>
 <var>${contents}</var>
 <arg>${json_response}</arg>
 <arg>${page_path}</arg>
 <doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-09-01T22:43:37.766651" elapsed="0.022704"/>
+<status status="PASS" start="2024-09-01T22:59:19.817509" elapsed="0.025774"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.789814" level="INFO">${contents} = [2]</msg>
+<msg time="2024-09-01T22:59:19.843730" level="INFO">${contents} = [2]</msg>
 <var>${contents}</var>
 <arg>${contents}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.789605" elapsed="0.000229"/>
+<status status="PASS" start="2024-09-01T22:59:19.843518" elapsed="0.000234"/>
 </kw>
 <kw name="Remove String Using Regexp" owner="String">
-<msg time="2024-09-01T22:43:37.790326" level="INFO">${contents} = 2</msg>
+<msg time="2024-09-01T22:59:19.844229" level="INFO">${contents} = 2</msg>
 <var>${contents}</var>
 <arg>${contents}</arg>
 <arg>['\\[\\],]</arg>
 <doc>Removes ``patterns`` from the given ``string``.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.789976" elapsed="0.000371"/>
+<status status="PASS" start="2024-09-01T22:59:19.843903" elapsed="0.000348"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${contents}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.790482" elapsed="0.000145"/>
+<status status="PASS" start="2024-09-01T22:59:19.844392" elapsed="0.000155"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${contents}</arg>
 <arg>2</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.790754" elapsed="0.000142"/>
+<status status="PASS" start="2024-09-01T22:59:19.844679" elapsed="0.000151"/>
 </kw>
 <tag>Demo</tag>
-<status status="PASS" start="2024-09-01T22:43:37.695365" elapsed="0.095665"/>
+<status status="PASS" start="2024-09-01T22:59:19.573484" elapsed="0.271488"/>
 </test>
 <test id="s1-s3-t2" name="Delete request data" line="49">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:37.791756" level="INFO">Creating Session using : alias=session1, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:19.845699" level="INFO">Creating Session using : alias=session1, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>session1</arg>
 <arg>${Delete_base_url}</arg>
 <arg>disable_warnings=1</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:37.791556" elapsed="0.000378"/>
+<status status="PASS" start="2024-09-01T22:59:19.845487" elapsed="0.000402"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:37.792212" level="INFO">${endpoint} = /posts/1</msg>
+<msg time="2024-09-01T22:59:19.846176" level="INFO">${endpoint} = /posts/1</msg>
 <var>${endpoint}</var>
 <arg>${Delete_endpoint}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.792074" elapsed="0.000157"/>
+<status status="PASS" start="2024-09-01T22:59:19.846031" elapsed="0.000165"/>
 </kw>
 <kw name="DELETE On Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:38.685129" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2024-09-01T22:59:20.838487" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2024-09-01T22:43:38.685534" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2024-09-01T22:59:20.839042" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:38 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725210818&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=gC2iffuiYJS2AzbF%2FCzyCmKEDGOi8AuMhcBd6uEkuq4%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725210818&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=gC2iffuiYJS2AzbF%2FCzyCmKEDGOi8AuMhcBd6uEkuq4%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1725210844', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6e45c0ea23ff3-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725211760&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=RXIzQRexAKYhFFg1RL%2BBV9PDNs2FO6B7IuLUi0f%2FnnE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725211760&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=RXIzQRexAKYhFFg1RL%2BBV9PDNs2FO6B7IuLUi0f%2FnnE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1725211804', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb5c3e473dd5-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={} 
  </msg>
-<msg time="2024-09-01T22:43:38.686461" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:20.839821" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>session1</arg>
 <arg>${endpoint}</arg>
 <doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-09-01T22:43:37.792353" elapsed="0.894195"/>
+<status status="PASS" start="2024-09-01T22:59:19.846332" elapsed="0.993558"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.687442" elapsed="0.001796"/>
+<status status="PASS" start="2024-09-01T22:59:20.840677" elapsed="0.001754"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.689711" elapsed="0.001432"/>
+<status status="PASS" start="2024-09-01T22:59:20.842879" elapsed="0.000967"/>
 </kw>
 <tag>Demo1</tag>
-<status status="PASS" start="2024-09-01T22:43:37.791207" elapsed="0.900300"/>
+<status status="PASS" start="2024-09-01T22:59:19.845159" elapsed="0.998983"/>
 </test>
 <test id="s1-s3-t3" name="load and get xml data" line="57">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.692998" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml</msg>
+<msg time="2024-09-01T22:59:20.845561" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml</msg>
 <var>${filepath}</var>
 <arg>${EXECDIR}/TestCases/Data.xml</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.692632" elapsed="0.000414"/>
+<status status="PASS" start="2024-09-01T22:59:20.845231" elapsed="0.000378"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${filepath}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.693333" elapsed="0.000279"/>
+<status status="PASS" start="2024-09-01T22:59:20.845877" elapsed="0.000279"/>
 </kw>
 <kw name="Parse Xml" owner="XML">
-<msg time="2024-09-01T22:43:38.697005" level="INFO">${XML} = &lt;Element 'root' at 0x7f9f201e6590&gt;</msg>
+<msg time="2024-09-01T22:59:20.849751" level="INFO">${XML} = &lt;Element 'root' at 0x7fdf88257860&gt;</msg>
 <var>${XML}</var>
 <arg>${filepath}</arg>
 <doc>Parses the given XML file or string into an element structure.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.693874" elapsed="0.003179"/>
+<status status="PASS" start="2024-09-01T22:59:20.846409" elapsed="0.003388"/>
 </kw>
 <kw name="Get Element" owner="XML">
-<msg time="2024-09-01T22:43:38.697623" level="INFO">${value} = &lt;Element 'firstName' at 0x7f9ef8028900&gt;</msg>
+<msg time="2024-09-01T22:59:20.850366" level="INFO">${value} = &lt;Element 'firstName' at 0x7fdf88268ef0&gt;</msg>
 <var>${value}</var>
 <arg>${XML}</arg>
 <arg>firstName</arg>
 <doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.697301" elapsed="0.000359"/>
+<status status="PASS" start="2024-09-01T22:59:20.850044" elapsed="0.000368"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${value.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.697904" elapsed="0.000820"/>
+<status status="PASS" start="2024-09-01T22:59:20.850643" elapsed="0.000793"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.699707" level="INFO">${firstName} = John</msg>
+<msg time="2024-09-01T22:59:20.852414" level="INFO">${firstName} = John</msg>
 <var>${firstName}</var>
 <arg>${value.text}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.698943" elapsed="0.000798"/>
+<status status="PASS" start="2024-09-01T22:59:20.851658" elapsed="0.000791"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${firstName}</arg>
 <arg>John</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.699967" elapsed="0.000259"/>
+<status status="PASS" start="2024-09-01T22:59:20.852678" elapsed="0.000260"/>
 </kw>
 <kw name="Parse Xml" owner="XML">
-<msg time="2024-09-01T22:43:38.700791" level="INFO">${XML} = &lt;Element 'root' at 0x7f9f687046d0&gt;</msg>
+<msg time="2024-09-01T22:59:20.853497" level="INFO">${XML} = &lt;Element 'root' at 0x7fdf882bc810&gt;</msg>
 <var>${XML}</var>
 <arg>${filepath}</arg>
 <doc>Parses the given XML file or string into an element structure.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.700431" elapsed="0.000393"/>
+<status status="PASS" start="2024-09-01T22:59:20.853127" elapsed="0.000402"/>
 </kw>
 <kw name="Get Element" owner="XML">
-<msg time="2024-09-01T22:43:38.701500" level="INFO">${value} = &lt;Element 'type' at 0x7f9f68704a90&gt;</msg>
+<msg time="2024-09-01T22:59:20.854410" level="INFO">${value} = &lt;Element 'type' at 0x7fdf882bcbd0&gt;</msg>
 <var>${value}</var>
 <arg>${XML}</arg>
 <arg>.//phoneNumbers[1]//type[2]</arg>
 <doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.701013" elapsed="0.000519"/>
+<status status="PASS" start="2024-09-01T22:59:20.853785" elapsed="0.000664"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${value.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.701750" elapsed="0.000662"/>
+<status status="PASS" start="2024-09-01T22:59:20.854719" elapsed="0.000767"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.703249" level="INFO">${firstName} = iPhone2</msg>
+<msg time="2024-09-01T22:59:20.856463" level="INFO">${firstName} = iPhone2</msg>
 <var>${firstName}</var>
 <arg>${value.text}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.702591" elapsed="0.000688"/>
+<status status="PASS" start="2024-09-01T22:59:20.855684" elapsed="0.000819"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${firstName}</arg>
 <arg>iPhone2</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.703467" elapsed="0.000211"/>
+<status status="PASS" start="2024-09-01T22:59:20.856745" elapsed="0.000253"/>
 </kw>
 <kw name="Parse Xml" owner="XML">
-<msg time="2024-09-01T22:43:38.704190" level="INFO">${XML} = &lt;Element 'root' at 0x7f9ef8028ea0&gt;</msg>
+<msg time="2024-09-01T22:59:20.857577" level="INFO">${XML} = &lt;Element 'root' at 0x7fdf88268ef0&gt;</msg>
 <var>${XML}</var>
 <arg>${filepath}</arg>
 <doc>Parses the given XML file or string into an element structure.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.703858" elapsed="0.000363"/>
+<status status="PASS" start="2024-09-01T22:59:20.857184" elapsed="0.000426"/>
 </kw>
 <kw name="Get Element" owner="XML">
-<msg time="2024-09-01T22:43:38.704986" level="INFO">${value} = &lt;Element 'streetAddress' at 0x7f9ef8028950&gt;</msg>
+<msg time="2024-09-01T22:59:20.858087" level="INFO">${value} = &lt;Element 'streetAddress' at 0x7fdf882bc680&gt;</msg>
 <var>${value}</var>
 <arg>${XML}</arg>
 <arg>.//address[1]//streetAddress</arg>
 <doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.704406" elapsed="0.000635"/>
+<status status="PASS" start="2024-09-01T22:59:20.857800" elapsed="0.000319"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${value.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.705350" elapsed="0.001133"/>
+<status status="PASS" start="2024-09-01T22:59:20.858314" elapsed="0.000920"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.707378" level="INFO">${firstName} = VJ lane</msg>
+<msg time="2024-09-01T22:59:20.860088" level="INFO">${firstName} = VJ lane</msg>
 <var>${firstName}</var>
 <arg>${value.text}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.706691" elapsed="0.000721"/>
+<status status="PASS" start="2024-09-01T22:59:20.859420" elapsed="0.000698"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${firstName}</arg>
 <arg>VJ lane</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.707619" elapsed="0.000239"/>
+<status status="PASS" start="2024-09-01T22:59:20.860303" elapsed="0.000205"/>
 </kw>
 <kw name="Get Element" owner="XML">
-<msg time="2024-09-01T22:43:38.708354" level="INFO">${value} = &lt;Element 'age' at 0x7f9ef8028900&gt;</msg>
+<msg time="2024-09-01T22:59:20.860981" level="INFO">${value} = &lt;Element 'age' at 0x7fdf88268d60&gt;</msg>
 <var>${value}</var>
 <arg>${XML}</arg>
 <arg>.//age[1]</arg>
 <doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.708077" elapsed="0.000305"/>
+<status status="PASS" start="2024-09-01T22:59:20.860726" elapsed="0.000283"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${value.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.708554" elapsed="0.000570"/>
+<status status="PASS" start="2024-09-01T22:59:20.861171" elapsed="0.000572"/>
 </kw>
 <tag>Demo3</tag>
-<status status="PASS" start="2024-09-01T22:43:38.691923" elapsed="0.017349"/>
+<status status="PASS" start="2024-09-01T22:59:20.844547" elapsed="0.017346"/>
 </test>
 <test id="s1-s3-t4" name="load and get JSON data" line="83">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.710081" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestData/data.json</msg>
+<msg time="2024-09-01T22:59:20.862678" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestData/data.json</msg>
 <var>${filepath}</var>
 <arg>${EXECDIR}/TestData/data.json</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.709892" elapsed="0.000215"/>
+<status status="PASS" start="2024-09-01T22:59:20.862496" elapsed="0.000208"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${filepath}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.710334" elapsed="0.000162"/>
+<status status="PASS" start="2024-09-01T22:59:20.862977" elapsed="0.000159"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2024-09-01T22:43:38.710805" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestData/data.json"&gt;/Users/vinodjoel/Documents/APIAutomation/TestData/data.json&lt;/a&gt;'.</msg>
-<msg time="2024-09-01T22:43:38.711249" level="INFO">${json_obj} = {
+<msg time="2024-09-01T22:59:20.863450" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestData/data.json"&gt;/Users/vinodjoel/Documents/APIAutomation/TestData/data.json&lt;/a&gt;'.</msg>
+<msg time="2024-09-01T22:59:20.863876" level="INFO">${json_obj} = {
     "firstName": "John",
     "lastName": "doe",
     "age": [26,36,46],
@@ -620,242 +620,242 @@
 <var>${json_obj}</var>
 <arg>${filepath}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.710642" elapsed="0.000660"/>
+<status status="PASS" start="2024-09-01T22:59:20.863285" elapsed="0.000624"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.711993" level="INFO">${value} = {'firstName': 'John', 'lastName': 'doe', 'age': [26, 36, 46], 'address': {'streetAddress': 'naist street', 'city': 'Nara', 'postalCode': '630-0192'}, 'phoneNumbers': [{'type': 'iPhone', 'number': '012...</msg>
+<msg time="2024-09-01T22:59:20.864448" level="INFO">${value} = {'firstName': 'John', 'lastName': 'doe', 'age': [26, 36, 46], 'address': {'streetAddress': 'naist street', 'city': 'Nara', 'postalCode': '630-0192'}, 'phoneNumbers': [{'type': 'iPhone', 'number': '012...</msg>
 <var>${value}</var>
 <arg>json.loads('''${json_obj}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.711558" elapsed="0.000467"/>
+<status status="PASS" start="2024-09-01T22:59:20.864085" elapsed="0.000394"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${value["firstName"]}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.712232" elapsed="0.000632"/>
+<status status="PASS" start="2024-09-01T22:59:20.864675" elapsed="0.000577"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.713602" level="INFO">${firstName} = John</msg>
+<msg time="2024-09-01T22:59:20.865950" level="INFO">${firstName} = John</msg>
 <var>${firstName}</var>
 <arg>${value["firstName"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.713044" elapsed="0.000587"/>
+<status status="PASS" start="2024-09-01T22:59:20.865413" elapsed="0.000564"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${firstName}</arg>
 <arg>John</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.713818" elapsed="0.000201"/>
+<status status="PASS" start="2024-09-01T22:59:20.866140" elapsed="0.000186"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.714699" level="INFO">${ph} = iPhone</msg>
+<msg time="2024-09-01T22:59:20.867004" level="INFO">${ph} = iPhone</msg>
 <var>${ph}</var>
 <arg>${value["phoneNumbers"][0]["type"]}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.714188" elapsed="0.000537"/>
+<status status="PASS" start="2024-09-01T22:59:20.866485" elapsed="0.000546"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${ph}</arg>
 <arg>iPhone</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.714902" elapsed="0.000183"/>
+<status status="PASS" start="2024-09-01T22:59:20.867193" elapsed="0.000180"/>
 </kw>
 <tag>Demo4</tag>
-<status status="PASS" start="2024-09-01T22:43:38.709492" elapsed="0.005798"/>
+<status status="PASS" start="2024-09-01T22:59:20.862116" elapsed="0.005434"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:37.672882" elapsed="1.042748"/>
+<status status="PASS" start="2024-09-01T22:59:19.550105" elapsed="1.317761"/>
 </suite>
 <suite id="s1-s4" name="TC04 PUT request" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC04_PUT_request.robot">
 <test id="s1-s4-t1" name="Put_User_Details" line="20">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:38.719271" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:20.871298" level="INFO">Creating Session using : alias=mypost_session, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mypost_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:38.719114" elapsed="0.000344"/>
+<status status="PASS" start="2024-09-01T22:59:20.871143" elapsed="0.000330"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.719844" level="INFO">${body} = {'name': 'vinodput', 'job': 'SW_Engineer'}</msg>
+<msg time="2024-09-01T22:59:20.871838" level="INFO">${body} = {'name': 'vinodput', 'job': 'SW_Engineer'}</msg>
 <var>${body}</var>
 <arg>name=vinodput</arg>
 <arg>job=SW_Engineer</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.719632" elapsed="0.000237"/>
+<status status="PASS" start="2024-09-01T22:59:20.871637" elapsed="0.000225"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:38.720188" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
+<msg time="2024-09-01T22:59:20.872193" level="INFO">${header} = {'Content-Type': 'application/json; charset=utf-8'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json; charset=utf-8</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.720024" elapsed="0.000186"/>
+<status status="PASS" start="2024-09-01T22:59:20.872012" elapsed="0.000203"/>
 </kw>
 <kw name="Put Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:38.720379" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
-<msg time="2024-09-01T22:43:39.197503" level="INFO">PUT Request : url=https://reqres.in/api/users/2 
+<msg time="2024-09-01T22:59:20.872382" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+<msg time="2024-09-01T22:59:21.380874" level="INFO">PUT Request : url=https://reqres.in/api/users/2 
  path_url=/api/users/2 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '42'} 
  body={"name": "vinodput", "job": "SW_Engineer"} 
  </msg>
-<msg time="2024-09-01T22:43:39.197959" level="INFO">PUT Response : url=https://reqres.in/api/users/2 
+<msg time="2024-09-01T22:59:21.381371" level="INFO">PUT Response : url=https://reqres.in/api/users/2 
  status=200, reason=OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725210819&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=639GZS4bRFt3s4Ca5AyDRoyjqxbiKA%2FBnOCOaexxZdI%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725210819&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=639GZS4bRFt3s4Ca5AyDRoyjqxbiKA%2FBnOCOaexxZdI%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"4e-waKF1N+83eFRmew+2R1wG1VZag4"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8bc6e4615f17a90b-MAA', 'Content-Encoding': 'gzip'} 
- body={"name":"vinodput","job":"SW_Engineer","updatedAt":"2024-09-01T17:13:39.015Z"} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725211761&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=pykDHcsgsNlbD43o7uTdD3a6ZV78ryQ4%2ByZc3vE901g%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725211761&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=pykDHcsgsNlbD43o7uTdD3a6ZV78ryQ4%2ByZc3vE901g%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"4e-kvMxFXUOEzH+8rKoGE0qXLl28Ik"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb62cba84049-BOM', 'Content-Encoding': 'gzip'} 
+ body={"name":"vinodput","job":"SW_Engineer","updatedAt":"2024-09-01T17:29:21.297Z"} 
  </msg>
-<msg time="2024-09-01T22:43:39.198536" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:21.381999" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mypost_session</arg>
 <arg>${user}</arg>
 <arg>data=${body}</arg>
 <arg>headers=${header}</arg>
 <doc>*DEPRECATED* Please use `PUT On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:38.720358" elapsed="0.478245"/>
+<status status="PASS" start="2024-09-01T22:59:20.872361" elapsed="0.509707"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.199362" elapsed="0.001466"/>
+<status status="PASS" start="2024-09-01T22:59:21.382892" elapsed="0.001587"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.201092" elapsed="0.000795"/>
+<status status="PASS" start="2024-09-01T22:59:21.384911" elapsed="0.001333"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:39.203351" level="INFO">${status_code} = 200</msg>
+<msg time="2024-09-01T22:59:21.387903" level="INFO">${status_code} = 200</msg>
 <var>${status_code}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.202139" elapsed="0.001298"/>
+<status status="PASS" start="2024-09-01T22:59:21.386730" elapsed="0.001222"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status_code}</arg>
 <arg>200</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.203911" elapsed="0.000448"/>
+<status status="PASS" start="2024-09-01T22:59:21.388251" elapsed="0.000345"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-09-01T22:43:39.205771" level="INFO">${title} = {"name":"vinodput","job":"SW_Engineer","updatedAt":"2024-09-01T17:13:39.015Z"}</msg>
+<msg time="2024-09-01T22:59:21.389785" level="INFO">${title} = {"name":"vinodput","job":"SW_Engineer","updatedAt":"2024-09-01T17:29:21.297Z"}</msg>
 <var>${title}</var>
 <arg>${response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.204663" elapsed="0.001153"/>
+<status status="PASS" start="2024-09-01T22:59:21.388863" elapsed="0.000967"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>vinodput</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.206093" elapsed="0.000266"/>
+<status status="PASS" start="2024-09-01T22:59:21.390071" elapsed="0.000215"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>SW_Engineer</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.206777" elapsed="0.000213"/>
+<status status="PASS" start="2024-09-01T22:59:21.390630" elapsed="0.000211"/>
 </kw>
 <kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:39.207994" level="INFO">${json_response} = {'name': 'vinodput', 'job': 'SW_Engineer', 'updatedAt': '2024-09-01T17:13:39.015Z'}</msg>
+<msg time="2024-09-01T22:59:21.392168" level="INFO">${json_response} = {'name': 'vinodput', 'job': 'SW_Engineer', 'updatedAt': '2024-09-01T17:29:21.297Z'}</msg>
 <var>${json_response}</var>
 <arg>${response.content}</arg>
 <doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-09-01T22:43:39.207203" elapsed="0.000828"/>
+<status status="PASS" start="2024-09-01T22:59:21.391130" elapsed="0.001084"/>
 </kw>
 <kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-09-01T22:43:39.235802" level="INFO">${contents} = ['2024-09-01T17:13:39.015Z']</msg>
+<msg time="2024-09-01T22:59:21.420041" level="INFO">${contents} = ['2024-09-01T17:29:21.297Z']</msg>
 <var>${contents}</var>
 <arg>${json_response}</arg>
 <arg>${updated_time}</arg>
 <doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-09-01T22:43:39.208289" elapsed="0.027549"/>
+<status status="PASS" start="2024-09-01T22:59:21.392524" elapsed="0.027552"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2024-09-01T22:43:39.236234" level="INFO">Length is 1.</msg>
+<msg time="2024-09-01T22:59:21.420435" level="INFO">Length is 1.</msg>
 <arg>${contents}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.236062" elapsed="0.000223"/>
+<status status="PASS" start="2024-09-01T22:59:21.420281" elapsed="0.000201"/>
 </kw>
 <tag>put request demo</tag>
-<status status="PASS" start="2024-09-01T22:43:38.718730" elapsed="0.517712"/>
+<status status="PASS" start="2024-09-01T22:59:20.870776" elapsed="0.549861"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:38.716135" elapsed="0.520587"/>
+<status status="PASS" start="2024-09-01T22:59:20.868366" elapsed="0.552607"/>
 </suite>
 <suite id="s1-s5" name="TC05 Basic Auth" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC05_Basic_Auth.robot">
 <test id="s1-s5-t1" name="Basic_Authentication" line="11">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-09-01T22:43:39.239306" level="INFO">${auth} = ['postman', 'password']</msg>
+<msg time="2024-09-01T22:59:21.423549" level="INFO">${auth} = ['postman', 'password']</msg>
 <var>${auth}</var>
 <arg>postman</arg>
 <arg>password</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.239168" elapsed="0.000162"/>
+<status status="PASS" start="2024-09-01T22:59:21.423417" elapsed="0.000156"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:39.239679" level="INFO">Creating Session using : alias=mysession, url=https://postman-echo.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x7f9f08050190&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:21.423938" level="INFO">Creating Session using : alias=mysession, url=https://postman-echo.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x7fdf992781f0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <arg>auth=${auth}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:39.239462" elapsed="0.000376"/>
+<status status="PASS" start="2024-09-01T22:59:21.423721" elapsed="0.000366"/>
 </kw>
 <kw name="Get Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:39.239994" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2024-09-01T22:43:40.263142" level="INFO">GET Request : url=https://postman-echo.com/basic-auth 
+<msg time="2024-09-01T22:59:21.424244" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-09-01T22:59:22.439518" level="INFO">GET Request : url=https://postman-echo.com/basic-auth 
  path_url=/basic-auth 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic cG9zdG1hbjpwYXNzd29yZA=='} 
  body=None 
  </msg>
-<msg time="2024-09-01T22:43:40.263460" level="INFO">GET Response : url=https://postman-echo.com/basic-auth 
+<msg time="2024-09-01T22:59:22.439843" level="INFO">GET Response : url=https://postman-echo.com/basic-auth 
  status=200, reason=OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Connection': 'keep-alive', 'Server': 'nginx/1.25.3', 'ETag': 'W/"1b-o64KRFi1Uw+73hnrS1UFKUVInOY"', 'set-cookie': 'sails.sid=s%3A1qqt5LPKskN8x_KK7U90nbvFlsiTkI5x.%2FgPUsuyFBv%2F52hag1OXraaoxnv7LHXyAQVGzIpe4WBs; Path=/; HttpOnly'} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Connection': 'keep-alive', 'Server': 'nginx/1.25.3', 'ETag': 'W/"1b-o64KRFi1Uw+73hnrS1UFKUVInOY"', 'set-cookie': 'sails.sid=s%3Ab90GFe2o01M5V1yqD4EubHNEg7YbOq5s.HIdcuAiwAQIIMZ8pQig%2BbrIJ5SCL5WHkvBT6hzOuCQo; Path=/; HttpOnly'} 
  body={
   "authenticated": true
 } 
  </msg>
-<msg time="2024-09-01T22:43:40.263883" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:22.440265" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>${URI}</arg>
 <doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:39.239974" elapsed="1.023978"/>
+<status status="PASS" start="2024-09-01T22:59:21.424224" elapsed="1.016102"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:40.264738" elapsed="0.002196"/>
+<status status="PASS" start="2024-09-01T22:59:22.441090" elapsed="0.001549"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-09-01T22:43:40.269204" level="INFO">Argument types are:
+<msg time="2024-09-01T22:59:22.443917" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-09-01T22:43:40.267739" elapsed="0.001599"/>
+<status status="PASS" start="2024-09-01T22:59:22.442994" elapsed="0.001031"/>
 </kw>
-<status status="PASS" start="2024-09-01T22:43:39.238862" elapsed="1.030871"/>
+<status status="PASS" start="2024-09-01T22:59:21.423104" elapsed="1.021301"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:39.237145" elapsed="1.033119"/>
+<status status="PASS" start="2024-09-01T22:59:21.421425" elapsed="1.023859"/>
 </suite>
 <suite id="s1-s6" name="TC06 Bearer Auth" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC06_Bearer_Auth.robot">
 <test id="s1-s6-t1" name="Bearer_Auth" line="11">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:40.275980" level="INFO">Creating Session using : alias=mysession, url=https://certtransaction.elementexpress.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:22.451082" level="INFO">Creating Session using : alias=mysession, url=https://certtransaction.elementexpress.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:40.275747" elapsed="0.000480"/>
+<status status="PASS" start="2024-09-01T22:59:22.450838" elapsed="0.000504"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:40.276864" level="INFO">${headers} = {'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml'}</msg>
+<msg time="2024-09-01T22:59:22.452004" level="INFO">${headers} = {'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml'}</msg>
 <var>${headers}</var>
 <arg>Authorization=${bearer_token}</arg>
 <arg>Content-Type=text/xml</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:40.276467" elapsed="0.000434"/>
+<status status="PASS" start="2024-09-01T22:59:22.451592" elapsed="0.000451"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2024-09-01T22:43:40.277344" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml"&gt;/Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml&lt;/a&gt;'.</msg>
-<msg time="2024-09-01T22:43:40.277681" level="INFO">${req_body} = &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+<msg time="2024-09-01T22:59:22.452501" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml"&gt;/Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml&lt;/a&gt;'.</msg>
+<msg time="2024-09-01T22:59:22.452837" level="INFO">${req_body} = &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
  &lt;root&gt;
      &lt;firstName&gt;John&lt;/firstName&gt;
      &lt;lastName&gt;doe&lt;/lastName&gt;
@@ -867,11 +867,11 @@
 <var>${req_body}</var>
 <arg>${EXECDIR}/TestCases/Data.xml</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2024-09-01T22:43:40.277118" elapsed="0.000605"/>
+<status status="PASS" start="2024-09-01T22:59:22.452263" elapsed="0.000617"/>
 </kw>
 <kw name="Post Request" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:40.277984" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg time="2024-09-01T22:43:41.042551" level="INFO">POST Request : url=https://certtransaction.elementexpress.com/ 
+<msg time="2024-09-01T22:59:22.453131" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-09-01T22:59:22.917864" level="INFO">POST Request : url=https://certtransaction.elementexpress.com/ 
  path_url=/ 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '"Bearer E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801"', 'Content-Type': 'text/xml', 'Content-Length': '579'} 
  body=&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
@@ -898,60 +898,60 @@
  &lt;/root&gt;
  
  </msg>
-<msg time="2024-09-01T22:43:41.043118" level="INFO">POST Response : url=https://certtransaction.elementexpress.com/ 
+<msg time="2024-09-01T22:59:22.918428" level="INFO">POST Response : url=https://certtransaction.elementexpress.com/ 
  status=200, reason=200 OK 
- headers={'Date': 'Sun, 01 Sep 2024 17:13:41 GMT', 'Content-Type': 'text/xml; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'private', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'X-Frame-Options': 'DENY', 'CF-Cache-Status': 'DYNAMIC', 'Set-Cookie': '__cf_bm=J8aSf4zsEMPKQgE.DrIncFOdn1g9Pr2ANv0sKNBKxU8-1725210821-1.0.1.1-.NpEghCha9w9uFNCwWGTqMszsZQqj3Ix0m5pF6V8qcU8ZWXHClO2067c8jC_JnjYQNRWLsfet5VT1X5SGDoqRgYd95K9mMtAC0HPYg0RHOw; path=/; expires=Sun, 01-Sep-24 17:43:41 GMT; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None, __cfruid=66d74a82bb408b140100817f37d5c10a05593515-1725210821; path=/; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None', 'Server': 'cloudflare', 'CF-RAY': '8bc6e46dbb9085f0-BOM'} 
+ headers={'Date': 'Sun, 01 Sep 2024 17:29:22 GMT', 'Content-Type': 'text/xml; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'private', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'X-Frame-Options': 'DENY', 'CF-Cache-Status': 'DYNAMIC', 'Set-Cookie': '__cf_bm=EzIT1lY718fomBWxXMj4KwCN1uobze5f8clzaUnydi8-1725211762-1.0.1.1-HPCLgZnVvpFuMS2tYCqKMEFIWUPEurqmAeopJCs.TWJ.gWTWt8PJ7xpUl6B3Cq0mljw4IMHADWIHHgyVkfOsth62fB1DuAqoypRGHDLxU8E; path=/; expires=Sun, 01-Sep-24 17:59:22 GMT; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None, __cfruid=9d4c906e02080e8656a5b3ce32447089403d297b-1725211762; path=/; domain=.certtransaction.elementexpress.com; HttpOnly; Secure; SameSite=None', 'Server': 'cloudflare', 'CF-RAY': '8bc6fb6c4a41f3a5-BOM'} 
  body=&lt;Response xmlns='https://transaction.elementexpress.com'&gt;&lt;Response&gt;&lt;ExpressResponseCode&gt;103&lt;/ExpressResponseCode&gt;&lt;ExpressResponseMessage&gt;TargetNamespace required&lt;/ExpressResponseMessage&gt;&lt;/Response&gt;&lt;/Response&gt; 
  </msg>
-<msg time="2024-09-01T22:43:41.043729" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-09-01T22:59:22.918896" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/</arg>
 <arg>data=${req_body}</arg>
 <arg>headers=${headers}</arg>
 <doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<status status="PASS" start="2024-09-01T22:43:40.277936" elapsed="0.765943"/>
+<status status="PASS" start="2024-09-01T22:59:22.453098" elapsed="0.465856"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:41.044452" elapsed="0.001227"/>
+<status status="PASS" start="2024-09-01T22:59:22.919671" elapsed="0.001720"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-01T22:43:41.045953" elapsed="0.000911"/>
+<status status="PASS" start="2024-09-01T22:59:22.921828" elapsed="0.001022"/>
 </kw>
-<status status="PASS" start="2024-09-01T22:43:40.274730" elapsed="0.772417"/>
+<status status="PASS" start="2024-09-01T22:59:22.450015" elapsed="0.473123"/>
 </test>
-<status status="PASS" start="2024-09-01T22:43:40.271056" elapsed="0.776577"/>
+<status status="PASS" start="2024-09-01T22:59:22.446304" elapsed="0.477354"/>
 </suite>
 <suite id="s1-s7" name="TC07 API token" source="/Users/vinodjoel/Documents/APIAutomation/TestCases/TC07_API_token.robot">
 <test id="s1-s7-t1" name="Google_Maps_PlacesAPI" line="17">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:41.053881" level="INFO">Creating Session using : alias=mysession, url=https://places.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-01T22:59:22.930124" level="INFO">Creating Session using : alias=mysession, url=https://places.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-09-01T22:43:41.053649" elapsed="0.000512"/>
+<status status="PASS" start="2024-09-01T22:59:22.929885" elapsed="0.000507"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-09-01T22:43:41.054793" level="INFO">${params} = {'fields': 'id,displayName', 'key': 'AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo'}</msg>
+<msg time="2024-09-01T22:59:22.931041" level="INFO">${params} = {'fields': 'id,displayName', 'key': 'AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo'}</msg>
 <var>${params}</var>
 <arg>fields=id,displayName</arg>
 <arg>key=${Api_token}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-09-01T22:43:41.054411" elapsed="0.000421"/>
+<status status="PASS" start="2024-09-01T22:59:22.930649" elapsed="0.000428"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-09-01T22:43:41.737778" level="INFO">GET Request : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
+<msg time="2024-09-01T22:59:23.295071" level="INFO">GET Request : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  path_url=/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-09-01T22:43:41.738271" level="INFO">GET Response : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
+<msg time="2024-09-01T22:59:23.295405" level="INFO">GET Response : url=https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo 
  status=403, reason=Forbidden 
- headers={'Vary': 'Origin, X-Origin, Referer', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Sun, 01 Sep 2024 17:13:41 GMT', 'Server': 'scaffolding on HTTPServer2', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
+ headers={'Vary': 'Origin, X-Origin, Referer', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Date': 'Sun, 01 Sep 2024 17:29:23 GMT', 'Server': 'scaffolding on HTTPServer2', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} 
  body={
   "error": {
     "code": 403,
@@ -981,29 +981,29 @@
 }
  
  </msg>
-<msg time="2024-09-01T22:43:41.739040" level="FAIL">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</msg>
+<msg time="2024-09-01T22:59:23.295936" level="FAIL">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>${request_uri}</arg>
 <arg>params=${params}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2024-09-01T22:43:41.055076" elapsed="0.689829">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</status>
+<status status="FAIL" start="2024-09-01T22:59:22.931300" elapsed="0.368661">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</status>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-09-01T22:43:41.745518" elapsed="0.000051"/>
+<status status="NOT RUN" start="2024-09-01T22:59:23.300906" elapsed="0.000072"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-09-01T22:43:41.745820" elapsed="0.000034"/>
+<status status="NOT RUN" start="2024-09-01T22:59:23.301306" elapsed="0.000033"/>
 </kw>
-<status status="FAIL" start="2024-09-01T22:43:41.053140" elapsed="0.693166">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</status>
+<status status="FAIL" start="2024-09-01T22:59:22.929351" elapsed="0.372421">HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id%2CdisplayName&amp;key=AIzaSyAPn-hZBBiDlwYUHy8VpDXkxxxPY2UzJBo</status>
 </test>
-<status status="FAIL" start="2024-09-01T22:43:41.048275" elapsed="0.698612"/>
+<status status="FAIL" start="2024-09-01T22:59:22.924449" elapsed="0.377888"/>
 </suite>
-<status status="FAIL" start="2024-09-01T22:43:33.433891" elapsed="8.313997"/>
+<status status="FAIL" start="2024-09-01T22:59:17.338530" elapsed="5.964834"/>
 </suite>
 <statistics>
 <total>
@@ -1029,11 +1029,11 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-09-01T22:43:33.509455" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2024-09-01T22:43:34.665258" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg time="2024-09-01T22:43:37.294530" level="WARN">Keyword 'RequestsLibrary.Patch Request' is deprecated. Please use `PATCH On Session` instead.</msg>
-<msg time="2024-09-01T22:43:38.720379" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
-<msg time="2024-09-01T22:43:39.239994" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2024-09-01T22:43:40.277984" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-09-01T22:59:17.426708" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-09-01T22:59:18.193062" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-09-01T22:59:18.740277" level="WARN">Keyword 'RequestsLibrary.Patch Request' is deprecated. Please use `PATCH On Session` instead.</msg>
+<msg time="2024-09-01T22:59:20.872382" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+<msg time="2024-09-01T22:59:21.424244" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2024-09-01T22:59:22.453131" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
 </errors>
 </robot>
