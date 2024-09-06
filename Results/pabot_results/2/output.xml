@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-09-06T22:40:08.790095" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="TC03 Sanity" source="/Users/vinodjoel/Documents/APIAutomation/Testcases/TC03_Sanity.robot">
+<test id="s1-s1-t1" name="get request Test title" line="18">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-06T22:40:08.919830" level="INFO">Creating Session using : alias=session1, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>session1</arg>
+<arg>${base_url}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-06T22:40:08.919544" elapsed="0.000532"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:08.920659" level="INFO">${endpoint} = /api/users?page=2</msg>
+<var>${endpoint}</var>
+<arg>/api/users?page=2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:08.920516" elapsed="0.000164"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-06T22:40:09.447049" level="INFO">GET Request : url=https://reqres.in/api/users?page=2 
+ path_url=/api/users?page=2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-09-06T22:40:09.447170" level="INFO">GET Response : url=https://reqres.in/api/users?page=2 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Sep 2024 17:10:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725349116&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=IqGBGXbPpS%2F0o38ryAkalQukbZZFCN3HNUWf2xniEZI%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725349116&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=IqGBGXbPpS%2F0o38ryAkalQukbZZFCN3HNUWf2xniEZI%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'REVALIDATED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '8bf01222088cb2b5-BLR', 'Content-Encoding': 'gzip'} 
+ body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-09-06T22:40:09.447307" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>session1</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-06T22:40:08.920783" elapsed="0.526553"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.447534" elapsed="0.000800"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.448460" elapsed="0.000439"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.headers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.449011" elapsed="0.000427"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.449938" level="INFO">{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</msg>
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.449546" elapsed="0.000435"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.450507" level="INFO">${status_code} = 200</msg>
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.450089" elapsed="0.000439"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.450636" elapsed="0.000152"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.451310" level="INFO">${first_name} = {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"i...</msg>
+<var>${first_name}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.450895" elapsed="0.000438"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${first_name}</arg>
+<arg>Michael</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.451434" elapsed="0.000129"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-09-06T22:40:09.452081" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
+<var>${contentTypeValue}</var>
+<arg>${response.headers}</arg>
+<arg>Content-Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.451663" elapsed="0.000439"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${contentTypeValue}</arg>
+<arg>application/json; charset=utf-8</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.452203" elapsed="0.000140"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-09-06T22:40:09.452825" level="INFO">${content_Connection} = keep-alive</msg>
+<var>${content_Connection}</var>
+<arg>${response.headers}</arg>
+<arg>Connection</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.452435" elapsed="0.000410"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${content_Connection}</arg>
+<arg>keep-alive</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.453082" elapsed="0.000133"/>
+</kw>
+<kw name="Convert String To Json" owner="JSONLibrary">
+<msg time="2024-09-06T22:40:09.453754" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>Convert String to JSON object</doc>
+<status status="PASS" start="2024-09-06T22:40:09.453311" elapsed="0.000465"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-09-06T22:40:09.478309" level="INFO">${contents} = [2]</msg>
+<var>${contents}</var>
+<arg>${json_response}</arg>
+<arg>${page_path}</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-09-06T22:40:09.453872" elapsed="0.024466"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.478666" level="INFO">${contents} = [2]</msg>
+<var>${contents}</var>
+<arg>${contents}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.478469" elapsed="0.000218"/>
+</kw>
+<kw name="Remove String Using Regexp" owner="String">
+<msg time="2024-09-06T22:40:09.479003" level="INFO">${contents} = 2</msg>
+<var>${contents}</var>
+<arg>${contents}</arg>
+<arg>['\\[\\],]</arg>
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.478791" elapsed="0.000233"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${contents}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.479119" elapsed="0.000134"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${contents}</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.479343" elapsed="0.000130"/>
+</kw>
+<tag>Demo</tag>
+<status status="PASS" start="2024-09-06T22:40:08.918721" elapsed="0.560845"/>
+</test>
+<test id="s1-s1-t2" name="Delete request data" line="49">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-06T22:40:09.480114" level="INFO">Creating Session using : alias=session1, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>session1</arg>
+<arg>${Delete_base_url}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-06T22:40:09.479959" elapsed="0.000275"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.480452" level="INFO">${endpoint} = /posts/1</msg>
+<var>${endpoint}</var>
+<arg>${Delete_endpoint}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.480331" elapsed="0.000139"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2024-09-06T22:40:09.913838" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2024-09-06T22:40:09.913971" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Sep 2024 17:10:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1725642609&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=N2ln314OqBuYFYpcPO3jrmbrXolV9ZfIyFg8iHqmR70%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1725642609&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=N2ln314OqBuYFYpcPO3jrmbrXolV9ZfIyFg8iHqmR70%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1725642612', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '8bf01226290c9c2f-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={} 
+ </msg>
+<msg time="2024-09-06T22:40:09.914123" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>session1</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.480558" elapsed="0.433594"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.914375" elapsed="0.000730"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.915247" elapsed="0.000523"/>
+</kw>
+<tag>Demo1</tag>
+<status status="PASS" start="2024-09-06T22:40:09.479722" elapsed="0.436188"/>
+</test>
+<test id="s1-s1-t3" name="load and get xml data" line="57">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.916662" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestCases/Data.xml</msg>
+<var>${filepath}</var>
+<arg>${EXECDIR}/TestCases/Data.xml</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.916477" elapsed="0.000212"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${filepath}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.916812" elapsed="0.000158"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<msg time="2024-09-06T22:40:09.919787" level="INFO">${XML} = &lt;Element 'root' at 0x7fbfb0bebf90&gt;</msg>
+<var>${XML}</var>
+<arg>${filepath}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.917090" elapsed="0.002731"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2024-09-06T22:40:09.920186" level="INFO">${value} = &lt;Element 'firstName' at 0x7fbfb1198a40&gt;</msg>
+<var>${value}</var>
+<arg>${XML}</arg>
+<arg>firstName</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.919966" elapsed="0.000248"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.920344" elapsed="0.000503"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.921635" level="INFO">${firstName} = John</msg>
+<var>${firstName}</var>
+<arg>${value.text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.920976" elapsed="0.000684"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${firstName}</arg>
+<arg>John</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.921780" elapsed="0.000177"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<msg time="2024-09-06T22:40:09.922331" level="INFO">${XML} = &lt;Element 'root' at 0x7fbfb1131180&gt;</msg>
+<var>${XML}</var>
+<arg>${filepath}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.922071" elapsed="0.000286"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2024-09-06T22:40:09.922887" level="INFO">${value} = &lt;Element 'type' at 0x7fbfb11a3540&gt;</msg>
+<var>${value}</var>
+<arg>${XML}</arg>
+<arg>.//phoneNumbers[1]//type[2]</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.922525" elapsed="0.000389"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.923033" elapsed="0.000502"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.924133" level="INFO">${firstName} = iPhone2</msg>
+<var>${firstName}</var>
+<arg>${value.text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.923659" elapsed="0.000498"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${firstName}</arg>
+<arg>iPhone2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.924276" elapsed="0.000156"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<msg time="2024-09-06T22:40:09.924801" level="INFO">${XML} = &lt;Element 'root' at 0x7fbfb0bebf90&gt;</msg>
+<var>${XML}</var>
+<arg>${filepath}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.924546" elapsed="0.000281"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2024-09-06T22:40:09.925138" level="INFO">${value} = &lt;Element 'streetAddress' at 0x7fbfb11989f0&gt;</msg>
+<var>${value}</var>
+<arg>${XML}</arg>
+<arg>.//address[1]//streetAddress</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.924941" elapsed="0.000228"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.925289" elapsed="0.000481"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.926359" level="INFO">${firstName} = VJ lane</msg>
+<var>${firstName}</var>
+<arg>${value.text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.925883" elapsed="0.000501"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${firstName}</arg>
+<arg>VJ lane</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.926498" elapsed="0.000153"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2024-09-06T22:40:09.926955" level="INFO">${value} = &lt;Element 'age' at 0x7fbfb11989a0&gt;</msg>
+<var>${value}</var>
+<arg>${XML}</arg>
+<arg>.//age[1]</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.926763" elapsed="0.000217"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.927093" elapsed="0.000478"/>
+</kw>
+<tag>Demo3</tag>
+<status status="PASS" start="2024-09-06T22:40:09.916136" elapsed="0.011543"/>
+</test>
+<test id="s1-s1-t4" name="load and get JSON data" line="83">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.928290" level="INFO">${filepath} = /Users/vinodjoel/Documents/APIAutomation/TestData/data.json</msg>
+<var>${filepath}</var>
+<arg>${EXECDIR}/TestData/data.json</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.928134" elapsed="0.000179"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${filepath}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.928417" elapsed="0.000135"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-09-06T22:40:09.928810" level="INFO" html="true">Getting file '&lt;a href="file:///Users/vinodjoel/Documents/APIAutomation/TestData/data.json"&gt;/Users/vinodjoel/Documents/APIAutomation/TestData/data.json&lt;/a&gt;'.</msg>
+<msg time="2024-09-06T22:40:09.929160" level="INFO">${json_obj} = {
+    "firstName": "John",
+    "lastName": "doe",
+    "age": [26,36,46],
+    "address": {
+        "streetAddress": "naist street",
+        "city": "Nara",
+        "postalCode": "630-0192"
+    },
+    "...</msg>
+<var>${json_obj}</var>
+<arg>${filepath}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.928663" elapsed="0.000521"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.929563" level="INFO">${value} = {'firstName': 'John', 'lastName': 'doe', 'age': [26, 36, 46], 'address': {'streetAddress': 'naist street', 'city': 'Nara', 'postalCode': '630-0192'}, 'phoneNumbers': [{'type': 'iPhone', 'number': '012...</msg>
+<var>${value}</var>
+<arg>json.loads('''${json_obj}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.929303" elapsed="0.000284"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value["firstName"]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.929696" elapsed="0.000432"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.930647" level="INFO">${firstName} = John</msg>
+<var>${firstName}</var>
+<arg>${value["firstName"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.930236" elapsed="0.000434"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${firstName}</arg>
+<arg>John</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.930778" elapsed="0.000143"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-06T22:40:09.931434" level="INFO">${ph} = iPhone</msg>
+<var>${ph}</var>
+<arg>${value["phoneNumbers"][0]["type"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.931029" elapsed="0.000427"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${ph}</arg>
+<arg>iPhone</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-06T22:40:09.931564" elapsed="0.000138"/>
+</kw>
+<tag>Demo4</tag>
+<status status="PASS" start="2024-09-06T22:40:09.927851" elapsed="0.003950"/>
+</test>
+<status status="PASS" start="2024-09-06T22:40:08.805119" elapsed="1.127049"/>
+</suite>
+<status status="PASS" start="2024-09-06T22:40:08.793998" elapsed="1.138672"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Demo</stat>
+<stat pass="1" fail="0" skip="0">Demo1</stat>
+<stat pass="1" fail="0" skip="0">Demo3</stat>
+<stat pass="1" fail="0" skip="0">Demo4</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="TC03 Sanity">Suites.TC03 Sanity</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
