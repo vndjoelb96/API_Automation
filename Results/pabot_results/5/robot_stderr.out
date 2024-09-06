@@ -1,3 +1,0 @@
-[ WARN ] Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.
-/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'certtransaction.elementexpress.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(

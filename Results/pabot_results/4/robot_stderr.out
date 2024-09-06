@@ -1,3 +1,0 @@
-[ WARN ] Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.
-/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'postman-echo.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
