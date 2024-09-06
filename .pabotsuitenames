@@ -1,11 +1,10 @@
-datasources:79524176cc777a7053a9246504c112ca0b067429
+datasources:adeea688957193fbabf939bf1d3c1ab1f94de836
 commandlineoptions:1f91b5e0f501db9d98dbf576a7786ea6af6308da
 suitesfrom:no-suites-from-option
-file:f156ca1632f50ed9722ddf519b45695df63613d5
+file:b0658a3c2c353e348c9759ab3689d70a58a63a48
 --suite Suites.TC01 GET request
 --suite Suites.TC02 POST PATCH request
 --suite Suites.TC03 Sanity
 --suite Suites.TC04 PUT request
 --suite Suites.TC05 Basic Auth
 --suite Suites.TC06 Bearer Auth
---suite Suites.TC07 API token
